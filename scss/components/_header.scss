@@ -3,7 +3,112 @@
 **=======================================================**/
 
 .header {
-    
+    &-content {
+        @include flex-column;
+    }
+
+    .divider {
+        @include w100;
+        height: length(1);
+        background: $white-300;
+    }
+
+    &-top {
+        padding: length(18) length(0) length(24);
+        
+        &-content {
+            @include flex-center-between;
+
+            .left-content {
+                .header-slogan {
+                    color: $black-900;
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                }
+            }
+
+            .center-content {
+                .logo {
+                    width: length(175);
+                    height: length(36);
+                    @include flex-center;
+
+                    img {
+                        @include wh100;
+                        max-width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            .right-content {
+                .sociallist {
+                    @include list-horizontal;
+                    gap: length(16);
+
+                    &-link {
+                        @include square(length(24));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        &-content {
+            @include flex-center;
+
+            .desktoplist {
+                @include list-horizontal;
+
+                &-link {
+                    @include flex-center;
+                    gap: length(5);
+                    color: $black-900;
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                    padding: length(24) length(40);
+                    
+                    .linktitle {
+                        color: $black-900;
+                        @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                    }
+
+                    .linkicon {
+                        @include square(length(24));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+
+                    @include hover {
+                        color: $primary;
+
+                        .linktitle {
+                            color: $primary;
+                        }
+
+                        .linkicon {
+                            @include transform(rotate(180deg));
+
+                            svg {
+                                path {
+                                    stroke: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /**=======================================================**
