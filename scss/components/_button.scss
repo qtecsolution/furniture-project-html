@@ -1,0 +1,18 @@
+/**=====================================================**
+                    BUTTON STYLE START
+=======================================================**/
+
+.btn-delete {
+    @include transparent-button;
+    @include square(length(16));
+    @include flex-center;
+    overflow: hidden;
+
+    svg {
+        @include wh100;
+    }
+}
+
+/**=====================================================**
+                    BUTTON STYLE END
+=======================================================**/

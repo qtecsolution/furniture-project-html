@@ -1,0 +1,100 @@
+/**=====================================================
+                OFFCANVAS STYLE START
+=====================================================**/
+
+.offcanvas-top {
+    height: 100vh;
+    border-bottom: none;
+}
+
+.offcanvas-bottom {
+    height: 100vh;
+    border-top: none;
+}
+
+.offcanvas-start {
+    border-right: none;
+}
+
+.offcanvas-end {
+    border-left: 0;
+}
+
+.offcanvas {
+    width: length(260);
+
+    @include breakpoint(mobile360) {
+        width: length(300);
+    }
+
+    &-header {
+        position: relative;
+        @include flex-center;
+
+        .logo {
+            width: length(120);
+            height: length(40);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include w100;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .btn-close {
+            @include square(length(30));
+            background: $white;
+            margin: 0;
+            padding: length(8);
+            @include flex-center;
+            @include circle;
+            opacity: 1;
+            position: absolute;
+            top: length(8);
+            left: calc(100% + .5rem);
+
+            svg {
+                @include wh100;
+                @include transitiontransform;
+
+                path {
+                    @include transitions;
+                }
+            }
+
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            @include hover {
+                svg {
+                    @include transform(rotate(90deg));
+
+                    path {
+                        // fill: $danger;
+                    }
+                }
+            }
+        }
+    }
+
+    &-body {
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            background: transparent;
+            width: length(8);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $primary;
+        }
+    }
+}
+/**=====================================================
+                OFFCANVAS STYLE END
+=====================================================**/

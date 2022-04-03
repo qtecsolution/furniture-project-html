@@ -1,0 +1,27 @@
+/**=====================================================
+                TOPBAR STYLE START
+=====================================================**/
+
+.topbar {
+    background: $white-300;
+
+    &-content {
+        @include flex-center-between;
+    }
+
+    &-info {
+        width: calc(100% - 1rem);
+        @include flex-center;
+        padding: length(12) length(12) length(13);
+        text-align: center;
+    }
+
+    &-title {
+        color: $black-900;
+        @include font-face($futura, style('normal'), size(15), weight('normal'), line-height(15, 15));
+    }
+}
+
+/**=====================================================
+                TOPBAR STYLE END
+=====================================================**/

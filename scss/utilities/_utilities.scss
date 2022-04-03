@@ -1,0 +1,9 @@
+.furniture-container {
+    max-width: length(1720);
+    margin-inline: auto;
+    padding: length(0) length(20);
+    
+    @include breakpoint(tab992) {
+        padding: length(0) length(100);
+    }
+}

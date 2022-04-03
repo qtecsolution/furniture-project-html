@@ -1,0 +1,55 @@
+.preloader {
+    @include flex-center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include w100;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 9999;
+    background: $preloaderbg;
+}
+
+.spinner-box {
+    @include square(length(300));
+    @include flex-center;
+    .leo {
+        position: absolute;
+        @include flex-center;
+        @include circle;
+    }
+
+    .blue-orbit {
+        @include square(length(165));
+        @include border(solid, 2, $black-900);
+        animation: spin3D 3s linear .2s infinite;
+    }
+
+    .green-orbit {
+        @include square(length(120));
+        @include border(solid, 2, $black-800);
+        animation: spin3D 2s linear 0s infinite;
+    }
+
+    .red-orbit {
+        @include square(length(90));
+        @include border(solid, 2, $black-700);
+        animation: spin3D 1s linear 0s infinite;
+    }
+
+    .white-orbit {
+        @include square(length(60));
+        @include border(solid, 2, $primary);
+        animation: spin3D 10s linear 0s infinite;
+    }
+}
+
+@keyframes spin3D {
+    from {
+        @include transform(rotate3d(0.5, 0.5, 0.5, 360deg));
+    }
+
+    to {
+        @include transform(rotate3d(0deg));
+    }
+}

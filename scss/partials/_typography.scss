@@ -1,0 +1,76 @@
+/**==================================================
+                GOOGLE FONT CDN (INTER)
+==================================================**/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/**==================================================
+                FONTS INFO START
+==================================================**/
+$playfair: 'Playfair Display';
+$avenirNextLTPro: 'Avenir Next LT Pro';
+$futura: 'Futura Lt BT';
+$font-styles: ('normal': normal, 'italic': italic, 'oblique': oblique);
+$font-weights: ('thin':100, 'light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700, 'black': 900);
+
+// SET FONT-FAMILY
+@function family($font-family) {
+	@return inspect($value: $font-family);
+}
+
+// SET FONT-STYLE
+@function style($style) {
+	@return map-get($font-styles, $style);
+}
+
+// SET FONT-STYLE
+@function size($size) {
+	@return (($size / $base) + rem);
+}
+
+// SET FONT-WEIGHT
+@function weight($weight) {
+	@return map-get($font-weights, $weight);
+}
+
+// SET LINE-HEIGHT
+@function line-height($line-height, $size) {
+	@return ($line-height / $size);
+}
+
+/**===============================================
+                FONT STYLE MIXINS
+===============================================**/
+
+// FONT WITHOUT PATH
+@mixin font-face($fontname, $fontstyle, $fontsize, $fontweight, $line-height) {
+	font: {
+		family: quote($fontname);
+		style: $fontstyle;
+		size: $fontsize;
+		weight: $fontweight;
+	}
+
+	line-height: $line-height;
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro/AvenirNextLTPro-Regular.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro/AvenirNextLTPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Lt BT';
+    src: url('../fonts/Futura Lt BT/FuturaBT-Light.woff2') format('woff2'),
+        url('../fonts/Futura Lt BT/FuturaBT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+// @include font-face($playfair, style('normal'), size(18), weight('normal'), line-height(23.4, 18));
+// @include font-face($avenirNextLTPro, style('normal'), size(18), weight('normal'), line-height(23.4, 18));
+// @include font-face($futura, style('normal'), size(15), weight('normal'), line-height(15, 15));
