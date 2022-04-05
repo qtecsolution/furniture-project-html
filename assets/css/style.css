@@ -1353,6 +1353,88 @@ select {
   transform: rotate(90deg);
 }
 
+.btn-shop {
+  padding: 1.25rem 2.5rem;
+  background: transparent;
+  color: #ffffff;
+  border: solid 0.0625rem #ffffff;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .btn-shop {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 36rem) {
+  .btn-shop {
+    padding: 1.25rem 2.5rem;
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.btn-shop:not([disabled]):hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.btn-bordered {
+  padding: 0.875rem 2.5rem;
+  background: transparent;
+  color: #B78628;
+  border: solid 0.0625rem #B78628;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .btn-bordered {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .btn-bordered {
+    padding: 1.25rem 2.5rem;
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.btn-bordered:not([disabled]):hover {
+  background: #B78628;
+  color: #ffffff;
+}
+
 /**=====================================================**
                     BUTTON STYLE END
 =======================================================**/
@@ -1467,6 +1549,270 @@ select {
   line-height: 1.6;
 }
 
+.cardcategory {
+  height: 23.75rem;
+  position: relative;
+  overflow: hidden;
+  max-width: 18.75rem;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 25.875rem) {
+  .cardcategory {
+    max-width: 23.75rem;
+  }
+}
+
+@media screen and (min-width: 36rem) {
+  .cardcategory {
+    max-width: 100%;
+    height: 27.5rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .cardcategory {
+    height: 31.25rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .cardcategory {
+    height: 37.5rem;
+  }
+}
+
+.cardcategory img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cardcategory .cardcategory-content {
+  background: linear-gradient(0.26deg, #000000 5.7%, rgba(255, 255, 255, 0) 99.78%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cardcategory .cardcategory-content .cardtitle {
+  color: #ffffff;
+  border-bottom: solid 0.125rem #ffffff;
+  display: inline-block;
+  margin-left: 1.875rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cardcategory .cardcategory-content .cardtitle:not([disabled]):hover {
+  color: #000000;
+  border-color: #000000;
+}
+
+.cardcategory .cardcategory-content .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 1.5625rem 0rem 1.875rem;
+}
+
+.cardcategory .cardcategory-content .linkinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 0rem 0rem 1.5rem 1.875rem;
+}
+
+.cardcategory .cardcategory-content .linkinfo .linkicon {
+  margin-left: 0rem;
+  -webkit-transition: margin 250ms ease;
+  transition: margin 250ms ease;
+}
+
+.cardcategory .cardcategory-content .linkinfo .linktitle {
+  color: #ffffff;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.cardcategory .cardcategory-content .linkinfo:not([disabled]):hover .linkicon {
+  margin-left: 0.5rem;
+}
+
+.cardcategory .cardcategory-content .linkinfo:not([disabled]):hover .linkicon svg path {
+  fill: #000000;
+}
+
+.cardcategory .cardcategory-content .linkinfo:not([disabled]):hover .linktitle {
+  color: #000000;
+}
+
+.cardcategory .cardcategory-content:not([disabled]):hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.cardcategory .cardcategory-content:not([disabled]):hover .divider {
+  background: #E0E1E6;
+}
+
+.card-testimonial {
+  max-width: 38.625rem;
+  margin-inline: auto;
+  position: relative;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+}
+
+.card-testimonial-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.card-testimonial-header .card-thumbnail {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.card-testimonial-header .card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-testimonial-header .username {
+  color: #454545;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.card-testimonial-header .ratinglist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+.card-testimonial-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.875rem;
+}
+
+.card-testimonial-body blockquote {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.card-testimonial-body .quote {
+  color: #46474B;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 2.14286;
+  text-align: center;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-testimonial-body .quote {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 2;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .card-testimonial-body .quote {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+
 /**=====================================================**
                     CARD STYLE END
 =======================================================**/
@@ -1500,6 +1846,31 @@ select {
 /**=====================================================
                 MODAL STYLE END
 =====================================================**/
+.swiper-pagination-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.25rem;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 !important;
+  padding: 0;
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 100%;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #B78628;
+}
+
 /**=====================================================
                 OFFCANVAS STYLE START
 =====================================================**/
@@ -1824,8 +2195,399 @@ select {
 /**=====================================================
                 HOME-BANNER(DESKTOP) START
 =====================================================**/
+.homebanner {
+  background: url(../images/showcase/mobile-showcase.png);
+  min-height: calc(100vh - 12rem);
+}
+
+@media screen and (min-width: 62rem) {
+  .homebanner {
+    background: url(../images/showcase/showcase.png);
+  }
+}
+
+.homebanner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  min-height: calc(100vh - 12rem);
+  width: 100%;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 36rem) {
+  .homebanner-content {
+    padding: 4rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .homebanner-content {
+    width: 65%;
+    padding: 6.25rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .homebanner-content {
+    width: 70%;
+  }
+}
+
+.homebanner-content .banner-descriptions {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.75rem;
+}
+
+.homebanner-content .banner-descriptions .details {
+  max-width: 39.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+}
+
+.homebanner-content .banner-descriptions .details .bannertitle {
+  color: #ffffff;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.11111;
+}
+
+@media screen and (min-width: 36rem) {
+  .homebanner-content .banner-descriptions .details .bannertitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .homebanner-content .banner-descriptions .details .bannertitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 3.375rem;
+    font-weight: 600;
+    line-height: 1.11111;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .homebanner-content .banner-descriptions .details .bannertitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .homebanner-content .banner-descriptions .details .bannertitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.125;
+  }
+}
+
+.homebanner-content .banner-descriptions .details .bannertext {
+  color: #ffffff;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.71429;
+}
+
+@media screen and (min-width: 36rem) {
+  .homebanner-content .banner-descriptions .details .bannertext {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+  }
+}
+
 /**=====================================================
                 HOME-BANNER(DESKTOP) END
+=====================================================**/
+/**=====================================================
+                HOME-CATEGORY START
+=====================================================**/
+.homecategory {
+  padding: 4.0625rem 0rem 3.625rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .homecategory {
+    padding: 8.125rem 0rem 7.25rem;
+  }
+}
+
+.homecategory-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.homecategory-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .homecategory-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.homecategory-header .categorytitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+@media screen and (min-width: 48rem) {
+  .homecategory-header .categorytitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+/**=====================================================
+                HOME-CATEGORY END
+=====================================================**/
+/**=====================================================
+                FEATURED-PRODUCT START
+=====================================================**/
+.featuredproduct {
+  padding: 0rem 0rem 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .featuredproduct {
+    padding: 0rem 0rem 8.125rem;
+  }
+}
+
+.featuredproduct-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.featuredproduct-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .featuredproduct-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.featuredproduct-header .featuredtitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+@media screen and (min-width: 48rem) {
+  .featuredproduct-header .featuredtitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+}
+
+/**=====================================================
+                FEATURED-PRODUCT END
+=====================================================**/
+/**=====================================================
+                FEATURED-PRODUCT START
+=====================================================**/
+.homereviews {
+  background: url(../images/reviews/reviewbg.svg) no-repeat;
+}
+
+.homereviews .reviewSlider {
+  padding: 3.75rem 0rem 5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .homereviews .reviewSlider {
+    padding: 7.5rem 0rem 10rem;
+  }
+}
+
+.homereviews .reviewSlider .swiper-pagination {
+  bottom: 2.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .homereviews .reviewSlider .swiper-pagination {
+    bottom: 6.25rem;
+  }
+}
+
+/**=====================================================
+                FEATURED-PRODUCT END
+=====================================================**/
+/**=====================================================
+                SHOWROOM-SECTION START
+=====================================================**/
+.showroom {
+  background: url(../images/showroom/showroom-showcase.svg) no-repeat;
+}
+
+.showroom-content {
+  padding: 5rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.875rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .showroom-content {
+    padding: 9.6875rem 1.25rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .showroom-content {
+    width: 50%;
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(0.75rem);
+            backdrop-filter: blur(0.75rem);
+  }
+}
+
+.showroom-content .showroomtitle {
+  color: #ffffff;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.54167;
+}
+
+@media screen and (min-width: 48rem) {
+  .showroom-content .showroomtitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+.showroom-content .showroomlist {
+  margin-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.showroom-content .showroomlist-item {
+  color: #ffffff;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .showroom-content .showroomlist-item {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+/**=====================================================
+                SHOWROOM-SECTION END
 =====================================================**/
 /**=====================================================
                 HOME-FETURES START

@@ -1,0 +1,16 @@
+.swiper-pagination-horizontal {
+    @include flex-center;
+    gap: length(20);
+}
+
+.swiper-pagination-bullet {
+    // background: $white-200;
+    margin: 0 !important;
+    padding: 0;
+    @include square(length(10));
+    @include circle;
+
+    &.swiper-pagination-bullet-active {
+        background: $primary;
+    }
+}

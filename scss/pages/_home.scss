@@ -3,11 +3,239 @@
 =====================================================**/
 
 .homebanner {
-    
+    background: url(../images/showcase/mobile-showcase.png);
+    min-height: calc(100vh - 12rem);
+
+    @include breakpoint(tab992) {
+        background: url(../images/showcase/showcase.png);
+    }
+
+    &-content {
+        @include flex-center-vert;
+        position: relative;
+        min-height: calc(100vh - 12rem);
+        @include w100;
+        padding: length(32);
+
+        @include breakpoint(mobile576) {
+            padding: length(64);
+        }
+        
+        @include breakpoint(tab992) {
+            width: 65%;
+            padding: length(100);
+        }
+        
+        @include breakpoint(desktop1200) {
+            width: 70%;
+        }
+
+        .banner-descriptions {
+            @include wh100;
+            @include flex-column;
+            gap: length(44);
+
+            .details {
+                max-width: length(630);
+                @include flex-column;
+                gap: length(28);
+
+                .bannertitle {
+                    color: $white;
+                    @include font-face($playfair, style('normal'), size(36), weight('semibold'), line-height(40, 36));
+
+                    @include breakpoint(mobile576) {
+                        @include font-face($playfair, style('normal'), size(48), weight('semibold'), line-height(60, 48));
+                    }
+
+                    @include breakpoint(tab992) {
+                        @include font-face($playfair, style('normal'), size(54), weight('semibold'), line-height(60, 54));
+                    }
+
+                    @include breakpoint(desktop1200) {
+                        @include font-face($playfair, style('normal'), size(64), weight('semibold'), line-height(80, 64));
+                    }
+
+                    @include breakpoint(desktop1400) {
+                        @include font-face($playfair, style('normal'), size(80), weight('semibold'), line-height(90, 80));
+                    }
+                }
+
+                .bannertext {
+                    color: $white;
+                    @include font-face($avenirNextLTPro, style('normal'), size(14), weight('normal'), line-height(24, 14));
+
+                    @include breakpoint(mobile576) {
+                        @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                    }
+                }
+            }
+        }
+    }
 }
 
 /**=====================================================
                 HOME-BANNER(DESKTOP) END
+=====================================================**/
+
+/**=====================================================
+                HOME-CATEGORY START
+=====================================================**/
+
+.homecategory {
+    padding: length(65) length(0) length(58);
+    
+    @include breakpoint(tab992) {
+        padding: length(130) length(0) length(116);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(20);
+
+        @include breakpoint(mobile500) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .categorytitle {
+            @include font-face($playfair, style('normal'), size(24), weight('semibold'), line-height(24, 24));
+
+            @include breakpoint(mobile768) {
+                @include font-face($playfair, style('normal'), size(36), weight('semibold'), line-height(36, 36));
+            }
+        }
+    }
+}
+
+/**=====================================================
+                HOME-CATEGORY END
+=====================================================**/
+
+/**=====================================================
+                FEATURED-PRODUCT START
+=====================================================**/
+
+.featuredproduct {
+    padding: length(0) length(0) length(64);
+    
+    @include breakpoint(tab992) {
+        padding: length(0) length(0) length(130);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(20);
+
+        @include breakpoint(mobile500) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .featuredtitle {
+            @include font-face($playfair, style('normal'), size(24), weight('semibold'), line-height(24, 24));
+
+            @include breakpoint(mobile768) {
+                @include font-face($playfair, style('normal'), size(36), weight('semibold'), line-height(36, 36));
+            }
+        }
+    }
+}
+
+/**=====================================================
+                FEATURED-PRODUCT END
+=====================================================**/
+
+/**=====================================================
+                FEATURED-PRODUCT START
+=====================================================**/
+
+.homereviews {
+    background: url(../images/reviews/reviewbg.svg) no-repeat;
+
+    .reviewSlider {
+        padding: length(60) length(0) length(80);
+    
+        @include breakpoint(tab992) {
+            padding: length(120) length(0) length(160);
+        }
+
+        .swiper-pagination {
+            bottom: length(40);
+
+            @include breakpoint(tab992) {
+                bottom: length(100);
+            }
+        }
+    }
+}
+
+/**=====================================================
+                FEATURED-PRODUCT END
+=====================================================**/
+
+/**=====================================================
+                SHOWROOM-SECTION START
+=====================================================**/
+
+.showroom {
+    background: url(../images/showroom/showroom-showcase.svg) no-repeat;    
+
+    &-content {
+        padding: length(80) length(20);
+        @include flex-column;
+        gap: length(30);
+
+        @include breakpoint(tab992) {
+            padding: length(155) length(20);
+        }
+
+        @include breakpoint(tab992) {
+            width: 50%;
+            margin-left: auto;
+            background: rgba($white, 0.1);
+            backdrop-filter: blur(length(12));
+        }
+
+        .showroomtitle {
+            color: $white;
+            @include font-face($playfair, style('normal'), size(24), weight('semibold'), line-height(37, 24));
+
+            @include breakpoint(mobile768) {
+                @include font-face($playfair, style('normal'), size(38), weight('semibold'), line-height(57, 38));
+            }
+        }
+
+        .showroomlist {
+            margin-bottom: length(10);
+            padding-left: length(20);
+            @include flex-column;
+            gap: length(24);
+
+            &-item {
+                color: $white;
+                @include font-face($avenirNextLTPro, style('normal'), size(14), weight('normal'), line-height(14, 14));
+
+                @include breakpoint(mobile500) {
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                }
+            }
+        }
+    }
+}
+
+/**=====================================================
+                SHOWROOM-SECTION END
 =====================================================**/
 
 /**=====================================================

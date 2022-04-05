@@ -20,6 +20,52 @@
     }
 }
 
+.btn-shop {
+    padding: length(20) length(40);
+    @include setBgColor(transparent, $white);
+    @include border(solid, 1, $white);
+    @include font-face($playfair, style('normal'), size(14), weight('normal'), line-height(14, 14));
+    text-align: center;
+    @include transitions;
+
+    @include breakpoint(mobile500) {
+        @include font-face($playfair, style('normal'), size(16), weight('normal'), line-height(16, 16));
+    }
+
+    @include breakpoint(mobile576) {
+        padding: length(20) length(40);
+        @include font-face($playfair, style('normal'), size(20), weight('normal'), line-height(20, 20));
+    }
+
+    @include hover {
+        background: $white;
+        color: $black;
+    }
+}
+
+.btn-bordered {
+    padding: length(14) length(40);
+    @include setBgColor(transparent, $primary);
+    @include border(solid, 1, $primary);
+    @include font-face($playfair, style('normal'), size(14), weight('normal'), line-height(14, 14));
+    text-align: center;
+    @include transitions;
+
+    @include breakpoint(mobile500) {
+        @include font-face($playfair, style('normal'), size(16), weight('normal'), line-height(16, 16));
+    }
+
+    @include breakpoint(tab992) {
+        padding: length(20) length(40);
+        @include font-face($playfair, style('normal'), size(20), weight('normal'), line-height(20, 20));
+    }
+
+    @include hover {
+        background: $primary;
+        color: $white;
+    }
+}
+
 /**=====================================================**
                     BUTTON STYLE END
 =======================================================**/

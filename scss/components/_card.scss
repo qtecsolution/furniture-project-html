@@ -68,6 +68,169 @@
     }
 }
 
+.cardcategory {
+    height: length(380);
+    position: relative;
+    overflow: hidden;
+    max-width: length(300);
+    margin-inline: auto;
+
+    @include breakpoint(mobile414) {
+        max-width: length(380);
+    }
+
+    @include breakpoint(mobile576) {
+        max-width: 100%;
+        height: length(440);
+    }
+
+    @include breakpoint(mobile768) {
+        height: length(500);
+    }
+
+    @include breakpoint(tab992) {
+        height: length(600);
+    }
+
+    img {
+        @include wh100;
+        object-fit: cover;
+    }
+
+    .cardcategory-content {
+        background: $caregorygradient;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include wh100;
+        @include flex-column;
+        justify-content: flex-end;
+
+        @include transitions;
+
+        .cardtitle {
+            color: $white;
+            @include border-single(bottom, solid, 2, $white);
+            display: inline-block;
+            margin-left: length(30);
+            @include transitions;
+
+            @include hover {
+                color: $black;
+                border-color: $black;
+            }
+        }
+
+        .divider {
+            @include w100;
+            height: length(1);
+            background: rgba($white, 0.3);
+            margin: length(25) length(0) length(30);
+        }
+
+        .linkinfo {
+            @include flex-center-vert;
+            gap: length(16);
+            padding: length(0) length(0) length(24) length(30);
+
+            .linkicon {
+                margin-left: length(0);
+                @include transition(margin $time ease);
+            }
+
+            .linktitle {
+                color: $white;
+                @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+            }
+
+            @include hover {
+                .linkicon {
+                    margin-left: length(8);
+
+                    svg {
+                        path {
+                            fill: $black;
+                        }
+                    }
+                }
+
+                .linktitle {
+                    color: $black;
+                }
+            }
+        }
+
+        @include hover {
+            background: rgba($white, 0.5);
+
+            .divider {
+                background: $white-300;
+            }
+        }
+    }
+}
+
+.card-testimonial {
+    max-width: length(618);
+    margin-inline: auto;
+    position: relative;
+    z-index: 1000;
+    @include flex-center-column;
+    gap: length(18);
+
+    &-header {
+        @include flex-center-column;
+        gap: length(8);
+        text-align: center;
+
+        .card-thumbnail {
+            @include square(length(40));
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+        }
+
+        .username {
+            color: $black-900;
+            @include font-face($playfair, style('normal'), size(20), weight('medium'), line-height(24, 20));
+        }
+
+        .ratinglist {
+            @include list-horizontal;
+            gap: length(4);
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(30);
+
+        blockquote {
+            padding-right: length(8);
+            padding-left: length(8);
+        }
+
+        .quote {
+            color: $black-800;
+            @include font-face($playfair, style('normal'), size(14), weight('normal'), line-height(30, 14));
+            text-align: center;
+
+            @include breakpoint(mobile768) {
+                @include font-face($playfair, style('normal'), size(14), weight('normal'), line-height(28, 14));
+            }
+
+            @include breakpoint(mobile768) {
+                @include font-face($playfair, style('normal'), size(20), weight('normal'), line-height(36, 20));
+            }
+        }
+    }
+}
+
 /**=====================================================**
                     CARD STYLE END
 =======================================================**/
