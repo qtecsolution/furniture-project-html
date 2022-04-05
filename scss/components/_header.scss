@@ -7,12 +7,6 @@
         @include flex-column;
     }
 
-    .divider {
-        @include w100;
-        height: length(1);
-        background: $white-300;
-    }
-
     &-top {
         padding: length(18) length(0) length(24);
         
@@ -23,6 +17,20 @@
                 .header-slogan {
                     color: $black-900;
                     @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                }
+
+                .headerlist {
+                    @include list-horizontal;
+                    gap: length(20);
+                    
+                    @include breakpoint(desktop1400) {
+                        gap: length(40);
+                    }
+
+                    &-link {
+                        color: $black-900;
+                        @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                    }
                 }
             }
 
@@ -60,6 +68,9 @@
     }
 
     &-bottom {
+        @include border-single(top, solid, 1, $white-300);
+        @include border-single(bottom, solid, 1, $white-300);
+
         &-content {
             @include flex-center;
 
@@ -71,7 +82,11 @@
                     gap: length(5);
                     color: $black-900;
                     @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
-                    padding: length(24) length(40);
+                    padding: length(24) length(20);
+                    
+                    @include breakpoint(desktop1400) {
+                        padding: length(24) length(40);
+                    }
                     
                     .linktitle {
                         color: $black-900;

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <!-- BOOTSTRAP-CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- FURNITURE-CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- PRELOADER END -->
+
+    <!-- TOPBAR SECTION START -->
+    <section class="topbar">
+        <div class="furniture-container">
+            <div class="topbar-content">
+                <div class="topbar-info">
+                    <p class="topbar-title">Get Free Delivery on all orders over $599</p>
+                </div>
+
+                <button type="button" class="btn-delete">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4L4 12" stroke="#46474B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 4L12 12" stroke="#46474B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- TOPBAR SECTION END -->
+
+    <!-- HEADER SECTION START -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-top">
+                <div class="furniture-container">
+                    <div class="header-top-content">
+                        <div class="left-content">
+                            <ul class="headerlist">
+                                <li class="headerlist-item">
+                                    <a href="#" class="headerlist-link">Meterials</a>
+                                </li>
+
+                                <li class="headerlist-item">
+                                    <a href="#" class="headerlist-link">Reviews</a>
+                                </li>
+                                
+                                <li class="headerlist-item">
+                                    <a href="#" class="headerlist-link">Impact</a>
+                                </li>
+
+                                <li class="headerlist-item">
+                                    <a href="#" class="headerlist-link">Rewards</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="center-content">
+                            <a href="index.html" class="logo">
+                                <img src="assets/images/logo/logo.svg" alt="logo">
+                            </a>
+                        </div>
+
+                        <div class="right-content">
+                            <ul class="sociallist">
+                                <li class="sociallist-item">
+                                    <a href="https://www.facebook.com" target="_blank" class="sociallist-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.695 8.937V10.314H9.68701V11.997H10.695V17H12.767V11.997H14.157C14.157 11.997 14.288 11.19 14.351 10.307H12.775V9.157C12.775 8.984 13.001 8.753 13.225 8.753H14.353V7H12.818C10.644 7 10.695 8.685 10.695 8.937Z" fill="#46474B"/>
+                                            <path d="M6 4C5.46957 4 4.96086 4.21071 4.58579 4.58579C4.21071 4.96086 4 5.46957 4 6V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H18C18.5304 20 19.0391 19.7893 19.4142 19.4142C19.7893 19.0391 20 18.5304 20 18V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4H6ZM6 2H18C19.0609 2 20.0783 2.42143 20.8284 3.17157C21.5786 3.92172 22 4.93913 22 6V18C22 19.0609 21.5786 20.0783 20.8284 20.8284C20.0783 21.5786 19.0609 22 18 22H6C4.93913 22 3.92172 21.5786 3.17157 20.8284C2.42143 20.0783 2 19.0609 2 18V6C2 4.93913 2.42143 3.92172 3.17157 3.17157C3.92172 2.42143 4.93913 2 6 2Z" fill="#46474B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                
+                                <li class="sociallist-item">
+                                    <a href="https://www.twitter.com" target="_blank" class="sociallist-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17 8.94701C16.632 9.10701 16.237 9.21701 15.822 9.26501C16.246 9.01501 16.57 8.61901 16.724 8.14801C16.32 8.38348 15.8791 8.54913 15.42 8.63801C15.2269 8.43558 14.9945 8.27462 14.7372 8.16493C14.4798 8.05524 14.2028 7.99913 13.923 8.00001C12.79 8.00001 11.872 8.90501 11.872 10.02C11.872 10.178 11.89 10.332 11.925 10.48C11.1123 10.4414 10.3166 10.2339 9.58865 9.87056C8.86068 9.50726 8.21643 8.99621 7.697 8.37001C7.51456 8.67711 7.41851 9.02781 7.419 9.38501C7.419 10.085 7.782 10.705 8.332 11.066C8.00644 11.0558 7.68786 10.9691 7.402 10.813V10.838C7.40509 11.3075 7.5708 11.7613 7.87092 12.1224C8.17103 12.4834 8.587 12.7292 9.048 12.818C8.74536 12.898 8.42869 12.9096 8.121 12.852C8.25513 13.2559 8.51167 13.608 8.85502 13.8594C9.19837 14.1108 9.61148 14.2491 10.037 14.255C9.30696 14.8176 8.41064 15.1215 7.489 15.119C7.324 15.119 7.161 15.109 7 15.091C7.94047 15.6863 9.03096 16.0016 10.144 16C13.918 16 15.981 12.922 15.981 10.252L15.974 9.99001C16.3763 9.70729 16.7239 9.3539 17 8.94701Z" fill="#46474B"/>
+                                            <path d="M6 4C5.46957 4 4.96086 4.21071 4.58579 4.58579C4.21071 4.96086 4 5.46957 4 6V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H18C18.5304 20 19.0391 19.7893 19.4142 19.4142C19.7893 19.0391 20 18.5304 20 18V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4H6ZM6 2H18C19.0609 2 20.0783 2.42143 20.8284 3.17157C21.5786 3.92172 22 4.93913 22 6V18C22 19.0609 21.5786 20.0783 20.8284 20.8284C20.0783 21.5786 19.0609 22 18 22H6C4.93913 22 3.92172 21.5786 3.17157 20.8284C2.42143 20.0783 2 19.0609 2 18V6C2 4.93913 2.42143 3.92172 3.17157 3.17157C3.92172 2.42143 4.93913 2 6 2Z" fill="#46474B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li class="sociallist-item">
+                                    <a href="https://www.instagram.com" target="_blank" class="sociallist-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.45453C10.7945 7.45453 9.63836 7.93342 8.78592 8.78586C7.93348 9.6383 7.45459 10.7945 7.45459 12C7.45459 13.2055 7.93348 14.3617 8.78592 15.2141C9.63836 16.0665 10.7945 16.5454 12 16.5454C13.2056 16.5454 14.3617 16.0665 15.2142 15.2141C16.0666 14.3617 16.5455 13.2055 16.5455 12C16.5455 10.7945 16.0666 9.6383 15.2142 8.78586C14.3617 7.93342 13.2056 7.45453 12 7.45453ZM9.27277 12C9.27277 12.7233 9.56011 13.417 10.0716 13.9285C10.583 14.4399 11.2767 14.7273 12 14.7273C12.7234 14.7273 13.4171 14.4399 13.9285 13.9285C14.44 13.417 14.7273 12.7233 14.7273 12C14.7273 11.2767 14.44 10.583 13.9285 10.0715C13.4171 9.56005 12.7234 9.27271 12 9.27271C11.2767 9.27271 10.583 9.56005 10.0716 10.0715C9.56011 10.583 9.27277 11.2767 9.27277 12Z" fill="#46474B"/>
+                                            <path d="M17.4545 5.63635C17.2134 5.63635 16.9822 5.73213 16.8117 5.90262C16.6412 6.07311 16.5454 6.30434 16.5454 6.54544C16.5454 6.78655 16.6412 7.01778 16.8117 7.18827C16.9822 7.35876 17.2134 7.45453 17.4545 7.45453C17.6956 7.45453 17.9268 7.35876 18.0973 7.18827C18.2678 7.01778 18.3636 6.78655 18.3636 6.54544C18.3636 6.30434 18.2678 6.07311 18.0973 5.90262C17.9268 5.73213 17.6956 5.63635 17.4545 5.63635Z" fill="#46474B"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.63636 2C4.67194 2 3.74702 2.38312 3.06507 3.06507C2.38312 3.74702 2 4.67194 2 5.63636V18.3636C2 19.3281 2.38312 20.253 3.06507 20.9349C3.74702 21.6169 4.67194 22 5.63636 22H18.3636C19.3281 22 20.253 21.6169 20.9349 20.9349C21.6169 20.253 22 19.3281 22 18.3636V5.63636C22 4.67194 21.6169 3.74702 20.9349 3.06507C20.253 2.38312 19.3281 2 18.3636 2H5.63636ZM18.3636 3.81818H5.63636C5.15415 3.81818 4.69169 4.00974 4.35071 4.35071C4.00974 4.69169 3.81818 5.15415 3.81818 5.63636V18.3636C3.81818 18.8458 4.00974 19.3083 4.35071 19.6493C4.69169 19.9903 5.15415 20.1818 5.63636 20.1818H18.3636C18.8458 20.1818 19.3083 19.9903 19.6493 19.6493C19.9903 19.3083 20.1818 18.8458 20.1818 18.3636V5.63636C20.1818 5.15415 19.9903 4.69169 19.6493 4.35071C19.3083 4.00974 18.8458 3.81818 18.3636 3.81818Z" fill="#46474B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li class="sociallist-item">
+                                    <a href="https://www.pinterest.com" target="_blank" class="sociallist-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.355 13.614C11.1 14.99 10.79 16.31 9.86603 17C9.58203 14.92 10.285 13.356 10.611 11.697C10.055 10.733 10.678 8.79097 11.851 9.26997C13.296 9.85797 10.601 12.856 12.411 13.23C14.299 13.622 15.071 9.85597 13.899 8.62997C12.207 6.86197 8.97203 8.58997 9.37003 11.122C9.46703 11.742 10.088 11.929 9.61803 12.783C8.53503 12.536 8.21203 11.656 8.25303 10.483C8.32003 8.56297 9.92803 7.21997 11.542 7.03297C13.582 6.79797 15.496 7.80497 15.761 9.78097C16.058 12.011 14.84 14.427 12.658 14.253C12.068 14.206 11.818 13.903 11.355 13.613V13.614Z" fill="#46474B"/>
+                                            <path d="M6 4C5.46957 4 4.96086 4.21071 4.58579 4.58579C4.21071 4.96086 4 5.46957 4 6V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H18C18.5304 20 19.0391 19.7893 19.4142 19.4142C19.7893 19.0391 20 18.5304 20 18V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4H6ZM6 2H18C19.0609 2 20.0783 2.42143 20.8284 3.17157C21.5786 3.92172 22 4.93913 22 6V18C22 19.0609 21.5786 20.0783 20.8284 20.8284C20.0783 21.5786 19.0609 22 18 22H6C4.93913 22 3.92172 21.5786 3.17157 20.8284C2.42143 20.0783 2 19.0609 2 18V6C2 4.93913 2.42143 3.92172 3.17157 3.17157C3.92172 2.42143 4.93913 2 6 2Z" fill="#46474B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="header-bottom">
+                <div class="furniture-container">
+                    <div class="header-bottom-content">
+                        <ul class="desktoplist">
+                            <li class="desktoplist-item">
+                                <a href="#" class="desktoplist-link">
+                                    <span class="linktitle">Bedroom</span>
+
+                                    <span class="linkicon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9L12 15L18 9" stroke="#454545" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="desktoplist-item">
+                                <a href="#" class="desktoplist-link">
+                                    <span class="linktitle">Dining</span>
+
+                                    <span class="linkicon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9L12 15L18 9" stroke="#454545" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="desktoplist-item">
+                                <a href="#" class="desktoplist-link">
+                                    <span class="linktitle">Living</span>
+
+                                    <span class="linkicon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9L12 15L18 9" stroke="#454545" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="desktoplist-item">
+                                <a href="#" class="desktoplist-link">Special Offers</a>
+                            </li>
+
+                            <li class="desktoplist-item">
+                                <a href="#" class="desktoplist-link">Visit Our Showroom</a>
+                            </li>
+
+                            <li class="desktoplist-item">
+                                <a href="#" class="desktoplist-link">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <!-- FURNITURE-BREADCRUMB START -->
+    <section class="furniturebreadcrumb">
+        <div class="furniture-container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li class="divider">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12L10 8L6 4" stroke="#46474B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="product-categories.html">Product Categories</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <!-- FURNITURE-BREADCRUMB END -->
+
+    <!-- CATEGORY-DETAILS START -->
+    <section class="categorydetails">
+        <div class="furniture-container">
+            <div class="categorydetails-content">
+                <h3 class="categorydetails-title">Beds</h3>
+
+                <div class="categorydetails-info">
+                    <div class="category-results">
+                        <p class="resultstext">Showing 1-20 of 39 products</p>
+                    </div>
+
+                    <div class="sorting">
+                        <select name="" id="" class="sorting-select">
+                            <option value="">Default sorting</option>
+                            <option value="">Sorting 1</option>
+                            <option value="">Sorting 2</option>
+                            <option value="">Sorting 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CATEGORY-DETAILS END -->
+
+    <!-- CATEGORY-DETAILS START -->
+    <section class="products">
+        <div class="furniture-container">
+            <div class="products-contents">
+                <div class="row g-4 productrow">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-1.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-2.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-3.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-4.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="row g-4 productrow">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-1.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-2.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-3.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-4.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="row g-4 productrow">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-1.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-2.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-3.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-4.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="row g-4 productrow">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-1.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-2.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-3.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                        <a href="product-details.html" class="productlink">
+                            <div class="product">
+                                <div class="product-header">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-4.svg" alt="product-thumbnail">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-body">
+                                    <h5 class="product-title">Myla Bespoke Bed (New)</h5>
+                                    <p class="product-price">From: $1,4999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CATEGORY-DETAILS END -->
+
+    <!-- HOME-FEATURES START -->
+    <section class="home-features">
+        <div class="furniture-container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="cardfeature">
+                        <div class="cardfeature-header">
+                            <img src="assets/images/features/feature-1.svg" alt="feature-thumbnail">
+                        </div>
+                        
+                        <div class="cardfeature-body">
+                            <h5 class="featuretitle">
+                                Feature in Top 10 Interior & Home Magazines in the world
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="cardfeature">
+                        <div class="cardfeature-header">
+                            <img src="assets/images/features/feature-2.svg" alt="feature-thumbnail">
+                        </div>
+                        
+                        <div class="cardfeature-body">
+                            <h5 class="featuretitle">
+                                0% Interest Free Credit. Spread The Cost Of Your Purchase.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="cardfeature">
+                        <div class="cardfeature-header">
+                            <img src="assets/images/features/feature-3.svg" alt="feature-thumbnail">
+                        </div>
+                        
+                        <div class="cardfeature-body">
+                            <h5 class="featuretitle">
+                                Order Online or Visit Our Showroom
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="cardfeature">
+                        <div class="cardfeature-header">
+                            <img src="assets/images/features/feature-4.svg" alt="feature-thumbnail">
+                        </div>
+                        
+                        <div class="cardfeature-body">
+                            <h5 class="featuretitle">
+                                Book an In-store Appointment Today
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HOME-FEATURES END -->
+
+    <!-- FOOTER-SECTION START -->
+    <footer class="footer">
+        <!-- FOOTER-INFO START -->
+        <div class="footer-info">
+            <div class="furniture-container">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="footinfo">
+                            <div class="footlogo">
+                                <img src="assets/images/logo/footer-logo.svg" alt="footer-logo">
+                            </div>
+
+                            <p class="foot-text">
+                                Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit. Etiam morbi in euismod 
+                                quam risus, dignissim
+                            </p>
+
+                            <ul class="footsociallist">
+                                <li class="footsociallist-item">
+                                    <a href="https://www.facebook.com" target="_blank" class="footsociallist-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.695 8.937V10.314H9.68701V11.997H10.695V17H12.767V11.997H14.157C14.157 11.997 14.288 11.19 14.351 10.307H12.775V9.157C12.775 8.984 13.001 8.753 13.225 8.753H14.353V7H12.818C10.644 7 10.695 8.685 10.695 8.937Z" fill="#46474B"/>
+                                            <path d="M6 4C5.46957 4 4.96086 4.21071 4.58579 4.58579C4.21071 4.96086 4 5.46957 4 6V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H18C18.5304 20 19.0391 19.7893 19.4142 19.4142C19.7893 19.0391 20 18.5304 20 18V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4H6ZM6 2H18C19.0609 2 20.0783 2.42143 20.8284 3.17157C21.5786 3.92172 22 4.93913 22 6V18C22 19.0609 21.5786 20.0783 20.8284 20.8284C20.0783 21.5786 19.0609 22 18 22H6C4.93913 22 3.92172 21.5786 3.17157 20.8284C2.42143 20.0783 2 19.0609 2 18V6C2 4.93913 2.42143 3.92172 3.17157 3.17157C3.92172 2.42143 4.93913 2 6 2Z" fill="#46474B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                
+                                <li class="footsociallist-item">
+                                    <a href="https://www.twitter.com" target="_blank" class="footsociallist-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17 8.94701C16.632 9.10701 16.237 9.21701 15.822 9.26501C16.246 9.01501 16.57 8.61901 16.724 8.14801C16.32 8.38348 15.8791 8.54913 15.42 8.63801C15.2269 8.43558 14.9945 8.27462 14.7372 8.16493C14.4798 8.05524 14.2028 7.99913 13.923 8.00001C12.79 8.00001 11.872 8.90501 11.872 10.02C11.872 10.178 11.89 10.332 11.925 10.48C11.1123 10.4414 10.3166 10.2339 9.58865 9.87056C8.86068 9.50726 8.21643 8.99621 7.697 8.37001C7.51456 8.67711 7.41851 9.02781 7.419 9.38501C7.419 10.085 7.782 10.705 8.332 11.066C8.00644 11.0558 7.68786 10.9691 7.402 10.813V10.838C7.40509 11.3075 7.5708 11.7613 7.87092 12.1224C8.17103 12.4834 8.587 12.7292 9.048 12.818C8.74536 12.898 8.42869 12.9096 8.121 12.852C8.25513 13.2559 8.51167 13.608 8.85502 13.8594C9.19837 14.1108 9.61148 14.2491 10.037 14.255C9.30696 14.8176 8.41064 15.1215 7.489 15.119C7.324 15.119 7.161 15.109 7 15.091C7.94047 15.6863 9.03096 16.0016 10.144 16C13.918 16 15.981 12.922 15.981 10.252L15.974 9.99001C16.3763 9.70729 16.7239 9.3539 17 8.94701Z" fill="#46474B"/>
+                                            <path d="M6 4C5.46957 4 4.96086 4.21071 4.58579 4.58579C4.21071 4.96086 4 5.46957 4 6V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H18C18.5304 20 19.0391 19.7893 19.4142 19.4142C19.7893 19.0391 20 18.5304 20 18V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4H6ZM6 2H18C19.0609 2 20.0783 2.42143 20.8284 3.17157C21.5786 3.92172 22 4.93913 22 6V18C22 19.0609 21.5786 20.0783 20.8284 20.8284C20.0783 21.5786 19.0609 22 18 22H6C4.93913 22 3.92172 21.5786 3.17157 20.8284C2.42143 20.0783 2 19.0609 2 18V6C2 4.93913 2.42143 3.92172 3.17157 3.17157C3.92172 2.42143 4.93913 2 6 2Z" fill="#46474B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li class="footsociallist-item">
+                                    <a href="https://www.instagram.com" target="_blank" class="footsociallist-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.45453C10.7945 7.45453 9.63836 7.93342 8.78592 8.78586C7.93348 9.6383 7.45459 10.7945 7.45459 12C7.45459 13.2055 7.93348 14.3617 8.78592 15.2141C9.63836 16.0665 10.7945 16.5454 12 16.5454C13.2056 16.5454 14.3617 16.0665 15.2142 15.2141C16.0666 14.3617 16.5455 13.2055 16.5455 12C16.5455 10.7945 16.0666 9.6383 15.2142 8.78586C14.3617 7.93342 13.2056 7.45453 12 7.45453ZM9.27277 12C9.27277 12.7233 9.56011 13.417 10.0716 13.9285C10.583 14.4399 11.2767 14.7273 12 14.7273C12.7234 14.7273 13.4171 14.4399 13.9285 13.9285C14.44 13.417 14.7273 12.7233 14.7273 12C14.7273 11.2767 14.44 10.583 13.9285 10.0715C13.4171 9.56005 12.7234 9.27271 12 9.27271C11.2767 9.27271 10.583 9.56005 10.0716 10.0715C9.56011 10.583 9.27277 11.2767 9.27277 12Z" fill="#46474B"/>
+                                            <path d="M17.4545 5.63635C17.2134 5.63635 16.9822 5.73213 16.8117 5.90262C16.6412 6.07311 16.5454 6.30434 16.5454 6.54544C16.5454 6.78655 16.6412 7.01778 16.8117 7.18827C16.9822 7.35876 17.2134 7.45453 17.4545 7.45453C17.6956 7.45453 17.9268 7.35876 18.0973 7.18827C18.2678 7.01778 18.3636 6.78655 18.3636 6.54544C18.3636 6.30434 18.2678 6.07311 18.0973 5.90262C17.9268 5.73213 17.6956 5.63635 17.4545 5.63635Z" fill="#46474B"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.63636 2C4.67194 2 3.74702 2.38312 3.06507 3.06507C2.38312 3.74702 2 4.67194 2 5.63636V18.3636C2 19.3281 2.38312 20.253 3.06507 20.9349C3.74702 21.6169 4.67194 22 5.63636 22H18.3636C19.3281 22 20.253 21.6169 20.9349 20.9349C21.6169 20.253 22 19.3281 22 18.3636V5.63636C22 4.67194 21.6169 3.74702 20.9349 3.06507C20.253 2.38312 19.3281 2 18.3636 2H5.63636ZM18.3636 3.81818H5.63636C5.15415 3.81818 4.69169 4.00974 4.35071 4.35071C4.00974 4.69169 3.81818 5.15415 3.81818 5.63636V18.3636C3.81818 18.8458 4.00974 19.3083 4.35071 19.6493C4.69169 19.9903 5.15415 20.1818 5.63636 20.1818H18.3636C18.8458 20.1818 19.3083 19.9903 19.6493 19.6493C19.9903 19.3083 20.1818 18.8458 20.1818 18.3636V5.63636C20.1818 5.15415 19.9903 4.69169 19.6493 4.35071C19.3083 4.00974 18.8458 3.81818 18.3636 3.81818Z" fill="#46474B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li class="footsociallist-item">
+                                    <a href="https://www.pinterest.com" target="_blank" class="footsociallist-link">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.355 13.614C11.1 14.99 10.79 16.31 9.86603 17C9.58203 14.92 10.285 13.356 10.611 11.697C10.055 10.733 10.678 8.79097 11.851 9.26997C13.296 9.85797 10.601 12.856 12.411 13.23C14.299 13.622 15.071 9.85597 13.899 8.62997C12.207 6.86197 8.97203 8.58997 9.37003 11.122C9.46703 11.742 10.088 11.929 9.61803 12.783C8.53503 12.536 8.21203 11.656 8.25303 10.483C8.32003 8.56297 9.92803 7.21997 11.542 7.03297C13.582 6.79797 15.496 7.80497 15.761 9.78097C16.058 12.011 14.84 14.427 12.658 14.253C12.068 14.206 11.818 13.903 11.355 13.613V13.614Z" fill="#46474B"/>
+                                            <path d="M6 4C5.46957 4 4.96086 4.21071 4.58579 4.58579C4.21071 4.96086 4 5.46957 4 6V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H18C18.5304 20 19.0391 19.7893 19.4142 19.4142C19.7893 19.0391 20 18.5304 20 18V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4H6ZM6 2H18C19.0609 2 20.0783 2.42143 20.8284 3.17157C21.5786 3.92172 22 4.93913 22 6V18C22 19.0609 21.5786 20.0783 20.8284 20.8284C20.0783 21.5786 19.0609 22 18 22H6C4.93913 22 3.92172 21.5786 3.17157 20.8284C2.42143 20.0783 2 19.0609 2 18V6C2 4.93913 2.42143 3.92172 3.17157 3.17157C3.92172 2.42143 4.93913 2 6 2Z" fill="#46474B"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-details">
+                            <h6 class="footer-title">Company Service</h6>
+
+                            <ul class="footerlist">
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">About</a>
+                                </li>
+                                
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">Contact</a>
+                                </li>
+
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">FAQ’s</a>
+                                </li>
+
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">Delivery & Returns</a>
+                                </li>
+
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">Email Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="footer-details">
+                            <h6 class="footer-title">Information</h6>
+
+                            <ul class="footerlist">
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">About Furniture</a>
+                                </li>
+                                
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">DivideBuy Interest Free Credit</a>
+                                </li>
+
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">Careers</a>
+                                </li>
+
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">Terms & Conditions</a>
+                                </li>
+
+                                <li class="footerlist-item">
+                                    <a href="#" class="footerlist-link">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div class="footerjoin">
+                            <h6 class="footer-title">Join Our Comfortable World</h6>
+
+                            <div class="contactinfo">
+                                <p class="contactinfo-text">
+                                    Email : <a href="mailto:info@furniture.com" class="link">info@furniture.com</a>
+                                </p>
+
+                                <p class="contactinfo-text">
+                                    Call : <a href="tel:08006519814" class="link">0800 651 9814</a>
+                                </p>
+                            </div>
+
+                            <div class="footer-subscribe">
+                                <input type="email" placeholder="Enter your email address" class="inputfield">
+                                <button class="btn-subscribe" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER-INFO END -->
+
+        <!-- FOOTER-COPYRIGHT START -->
+        <div class="copyright">
+            <div class="furniture-container">
+                <div class="copyright-info">
+                    <p class="copyright-text">&copy; 2022 Furniture | All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER-COPYRIGHT END -->
+    </footer>
+    <!-- FOOTER-SECTION END -->
+
+    <!-- TOPBAR JS -->
+    <script src="assets/js/topbar.js"></script>
+    <script src="assets/js/loader.js"></script>
+</body>
+</html>

@@ -2,7 +2,71 @@
                     CARD STYLE START
 =======================================================**/
 
+.product {
+    background: $white-200;
+    @include w100;
 
+    &-header {
+        padding: length(64) length(24);
+        @include flex-center;
+        overflow: hidden;
+    }
+
+    &-thumbnail {
+        @include w100;
+        height: length(220);
+
+        img {
+            @include wh100;
+            object-fit: contain;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(0.95));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(15);
+        padding: length(0) length(24) length(34);
+    }
+
+    &-title {
+        color: $black-900;
+        @include font-face($playfair, style('normal'), size(20), weight('medium'), line-height(24, 20));
+        @include transitions;
+
+        @include hover {
+            color: $primary;
+        }
+    }
+
+    &-price {
+        color: $black-800;
+        @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+    }
+}
+
+.cardfeature {
+    @include flex-column;
+    gap: length(18);
+    @include h100;
+
+    &-body {
+        max-width: 100%;
+        
+        @include breakpoint(tab992) {
+            max-width: 80%;
+        }
+
+        .featuretitle {
+            color: $black-800;
+            @include font-face($playfair, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+        }
+    }
+}
 
 /**=====================================================**
                     CARD STYLE END

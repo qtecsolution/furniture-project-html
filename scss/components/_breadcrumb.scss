@@ -1,0 +1,29 @@
+.furniturebreadcrumb {
+    padding: length(30) length(0);
+
+    .breadcrumb {
+        margin-bottom: length(0);
+        @include list-horizontal;
+        gap: length(5);
+
+        .divider {
+            @include square(length(16));
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+                @include wh100;
+            }
+        }
+
+        &-item {
+            color: $black-900;
+            @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+
+            a {
+                color: $black-900;
+                @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+            }
+        }
+    }
+}

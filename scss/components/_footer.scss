@@ -3,7 +3,239 @@
 =====================================================**/
 
 .footer {
-    
+    &-info {
+        @include border-single(top, solid, 1, $white-300);
+        @include border-single(bottom, solid, 1, $white-300);
+        padding: length(50) length(0);
+        
+        @include breakpoint(tab992) {
+            padding: length(100) length(0);
+        }
+
+        .footinfo {
+            @include flex-column;
+            gap: length(16);
+            
+            @include breakpoint(mobile576) {
+                gap: length(24);
+            }
+            
+            .footlogo {
+                width: length(180);
+                height: length(38);
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .foot-text {
+                color: $black-800;
+                @include font-face($avenirNextLTPro, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                
+                @include breakpoint(mobile576) {
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                }
+            }
+            
+            .footsociallist {
+                @include list-horizontal;
+                gap: length(16);
+
+                &-link {
+                    @include square(length(24));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(16);
+        
+        @include breakpoint(mobile576) {
+            gap: length(30);
+        }
+
+        .footer-title {
+            color: $black-900;
+            @include font-face($playfair, style('normal'), size(17), weight('medium'), line-height(24, 17));
+            
+            @include breakpoint(mobile576) {
+                @include font-face($playfair, style('normal'), size(20), weight('medium'), line-height(24, 20));
+            }
+        }
+
+        .footerlist {
+            @include list-vertical;
+            gap: length(12);
+                
+            @include breakpoint(mobile576) {
+                gap: length(16);
+            }
+
+            &-link {
+                color: $black-700;
+                @include font-face($avenirNextLTPro, style('normal'), size(14), weight('normal'), line-height(14, 14));
+                position: relative;
+                @include transitions;
+                
+                @include breakpoint(mobile576) {
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: length(1);
+                    left: 0;
+                    height: length(1);
+                    width: 0;
+                    background: $black-700;
+                    transition: .5s;
+                }
+
+                @include hover {
+                    color: $primary;
+
+                    &::before {
+                        @include w100;
+                        background: $primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerjoin {
+        @include flex-column;
+        gap: length(16);
+        
+        @include breakpoint(mobile576) {
+            gap: length(30);
+        }
+
+        .footer-title {
+            color: $black-900;
+            @include font-face($playfair, style('normal'), size(17), weight('medium'), line-height(24, 17));
+            
+            @include breakpoint(mobile576) {
+                @include font-face($playfair, style('normal'), size(20), weight('medium'), line-height(24, 20));
+            }
+        }
+
+        .contactinfo {
+            @include flex-column;
+            gap: length(16);
+
+            &-text {
+                color: $black-700;
+                @include font-face($avenirNextLTPro, style('normal'), size(14), weight('normal'), line-height(14, 14));
+                
+                @include breakpoint(mobile576) {
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                }
+
+                .link {
+                    color: $black-700;
+                    @include font-face($avenirNextLTPro, style('normal'), size(14), weight('normal'), line-height(14, 14));
+                    position: relative;
+                    @include transitions;
+                
+                    @include breakpoint(mobile576) {
+                        @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: length(1);
+                        left: 0;
+                        height: length(1);
+                        width: 0;
+                        background: $black-700;
+                        transition: .5s;
+                    }
+
+                    @include hover {
+                        color: $primary;
+
+                        &::before {
+                            @include w100;
+                            background: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-subscribe {
+        @include flex-center-vert;
+
+        .inputfield {
+            width: calc(100% - 6.375rem);
+            padding: length(12) length(20);
+            
+            @include border(solid, 1, $white-300);
+            border-right: 0;
+            color: $black-900;
+            @include font-face($avenirNextLTPro, style('normal'), size(14), weight('normal'), line-height(14, 14));
+
+            @include breakpoint(mobile576) {
+                width: calc(100% - 9.25rem);
+                padding: length(21) length(20);
+            }
+            
+            &::placeholder {
+                color: $textplaceholder;
+            }
+        }
+
+        .btn-subscribe {
+            padding: length(14) length(20);
+            @include setBgColor($primary, $white);
+            @include font-face($playfair, style('normal'), size(14), weight('normal'), line-height(14, 14));
+            @include transitions;
+
+            @include breakpoint(mobile576) {
+                padding: length(20) length(40);
+                @include font-face($playfair, style('normal'), size(20), weight('normal'), line-height(20, 20));
+            }
+
+            @include hover {
+                background: lighten($primary, 10%);
+            }
+        }
+    }
+
+    .copyright {
+        padding: length(30) length(0);
+
+        &-info {
+            @include flex-center;
+            text-align: center;
+
+            .copyright-text {
+                color: $black-700;
+                @include font-face($avenirNextLTPro, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                
+                @include breakpoint(mobile576) {
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(25.6, 16));
+                }
+            }
+        }
+    }
 }
 
 /**=====================================================

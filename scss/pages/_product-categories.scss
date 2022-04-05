@@ -1,0 +1,63 @@
+.categorydetails {
+    &-content {
+        @include flex-column;
+        gap: length(4);
+
+        .categorydetails-title {
+            color: $black-900;
+            @include font-face($playfair, style('normal'), size(38), weight('semibold'), line-height(57, 38));
+        }
+
+        .categorydetails-info {
+            @include flex-column;
+            gap: length(16);
+
+            @include breakpoint(mobile480) {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .category-results {
+                .resultstext {
+                    color: $black-900;
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                }
+            }
+
+            .sorting {
+                width: length(184);
+                
+                &-select {
+                    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%2346474B' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 8%;
+                    padding: length(14) length(36) length(14) length(26);
+                    appearance: none;
+                    @include border(solid, 1, $white-300);
+                    color: $black-900;
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(24, 16));
+                    @include radius(10);
+                }
+            }
+        }
+    }
+}
+
+.products {
+    padding: length(30) length(0);
+
+    &-contents {
+        @include flex-column;
+        gap: length(24);
+
+        .productrow {
+            // @include border-single(top, solid, 1, $white-300);
+            // @include border-single(bottom, solid, 1, $white-300);
+            
+            .productlink {
+                display: block;
+                @include w100;
+                // @include border-single(right, solid, 1, $white-300);
+            }
+        }
+    }
+}
