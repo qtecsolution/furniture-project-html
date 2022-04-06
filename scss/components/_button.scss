@@ -66,6 +66,28 @@
     }
 }
 
+.btn-size {
+    padding: length(12) length(30);
+    @include border(solid, 1, $white-200);
+    @include setBgColor($white, $black-800);
+    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(30.4, 16));
+    @include transitions;
+
+    @include breakpoint(tab992) {
+        @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+    }
+
+    &:hover:not(.active) {
+        @include setBgColor($primary, $white);
+        border-color: $primary;
+    }
+
+    &.active {
+        @include setBgColor($primary, $white);
+        border-color: $primary;
+    }
+}
+
 /**=====================================================**
                     BUTTON STYLE END
 =======================================================**/

@@ -1,0 +1,313 @@
+.productdetails {
+    padding: length(0) length(0) length(64);
+    
+    @include breakpoint(tab992) {
+        padding: length(0) length(0) length(130);
+    }
+
+    .thumbnail {
+        background: $white-200;
+        @include flex-center;
+        @include h100;
+        
+        @include breakpoint(tab992) {
+
+        }
+
+        @include breakpoint(desktop1200) {
+
+        }
+
+        @include breakpoint(desktop1400) {
+            height: length(648);
+        }
+
+        .thumb {
+            @include flex-center;
+            overflow: hidden;
+            padding: length(48);
+            @include h100;
+            
+            @include breakpoint(desktop1400) {
+                width: length(607);
+                height: length(420);
+            }
+
+            img {
+                @include wh100;
+                object-fit: contain;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+
+    .descriptions {
+        @include flex-column;
+        gap: length(26);
+
+        &-header {
+            @include flex-column;
+            gap: length(26);
+
+            .detailinfo {
+                @include flex-column;
+                gap: length(20);
+
+                .title {
+                    color: $black-900;
+                    @include font-face($playfair, style('normal'), size(28), weight('semibold'), line-height(37, 28));
+
+                    @include breakpoint(desktop1200) {
+                        @include font-face($playfair, style('normal'), size(38), weight('semibold'), line-height(57, 38));
+                    }
+                }
+
+                .ratinglist {
+                    @include list-horizontal;
+                    gap: length(15);
+
+                    &-item {
+                        @include square(length(20));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+                }
+
+                .price {
+                    color: $black-700;
+                    @include font-face($avenirNextLTPro, style('normal'), size(20), weight('normal'), line-height(20, 20));
+                }
+            }
+
+            .text {
+                color: $black-800;
+                @include font-face($avenirNextLTPro, style('normal'), size(18), weight('normal'), line-height(32.4, 18));
+            }
+        }
+
+        &-body {
+            @include flex-center-between;
+            // flex-wrap: wrap;
+            padding: length(20) length(0);
+            @include border-single(top, solid, 1, $white-300);
+            @include border-single(bottom, solid, 1, $white-300);
+
+            .divider {
+                margin: length(0) length(20);
+            }
+
+            .detail {
+                // width: calc((100% / 5) - 2.5rem);
+                @include flex-center-column;
+                gap: length(15);
+
+                h4 {
+                    color: $black-900;
+                    @include font-face($playfair, style('normal'), size(24), weight('normal'), line-height(28.8, 24));
+                }
+
+                p {
+                    @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                }
+            }
+        }
+
+        &-footer {
+            @include flex-column;
+            gap: length(26);
+
+            .sizebox {
+                @include flex-column;
+                gap: length(10);
+
+                &-header {
+                    .sizebox-title {
+                        color: $black-900;
+                        @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(30.4, 16));
+
+                        @include breakpoint(tab992) {
+                            @include font-face($avenirNextLTPro, style('normal'), size(18), weight('normal'), line-height(32.4, 18));
+                        }
+                    }
+                }
+
+                &-body {
+                    @include flex-center-vert;
+                    gap: length(20);
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+.productgallery {
+    @include flex-column;
+    gap: length(10);
+
+    @include breakpoint(tab992) {
+        flex-direction: row;
+    }
+
+    .leftcontent {
+        @include w100;
+
+        @include breakpoint(tab992) {
+            width: 50%;
+        }
+
+        .gallerythumb {
+            @include w100;
+            height: length(400);
+            overflow: hidden;
+
+            @include breakpoint(tab992) {
+                height: length(600);
+            }
+
+            @include breakpoint(desktop1400) {
+                height: length(800);
+            }
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+
+    .rightcontent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: length(10);
+
+        @include breakpoint(tab992) {
+            width: 50%;
+        }
+
+        .singlecontent {
+            width: calc((100% / 2) - .625rem);
+
+            .gallerythumb {
+                height: length(220);
+                @include w100;
+                overflow: hidden;
+
+                @include breakpoint(tab992) {
+                    height: length(294);
+                }
+
+                @include breakpoint(desktop1400) {
+                    height: length(394);
+                }
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                    @include transitiontransform;
+
+                    @include hover {
+                        @include transform(scale(0.98));
+                    }
+                }
+            }
+        }
+    }
+}
+
+.aboutsection {
+    padding: length(24) length(0) length(48);
+    
+    @include breakpoint(tab992) {
+        padding: length(50) length(0) length(100);
+    }
+
+    .aboutbox {
+        @include flex-column;
+        gap: length(25);
+
+        .titlegroup {
+            @include flex-column;
+            gap: length(20);
+
+            .subtitle {
+                color: $black-700;
+                @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                
+                @include breakpoint(mobile768) {
+                    @include font-face($avenirNextLTPro, style('normal'), size(18), weight('normal'), line-height(18, 18));
+                }
+                
+                @include breakpoint(tab992) {
+                    @include font-face($avenirNextLTPro, style('normal'), size(20), weight('normal'), line-height(20, 20));
+                }
+            }
+
+            .title {
+                color: $black-900;
+                @include font-face($playfair, style('normal'), size(20), weight('semibold'), line-height(24.4, 20));
+                
+                @include breakpoint(mobile768) {
+                    @include font-face($playfair, style('normal'), size(24), weight('semibold'), line-height(28.4, 24));
+                }
+                
+                @include breakpoint(tab992) {
+                    @include font-face($playfair, style('normal'), size(32), weight('semibold'), line-height(38.4, 32));
+                }
+            }
+        }
+
+        .aboutlist {
+            padding-left: length(16);
+            @include flex-column;
+            gap: length(14);
+            
+            @include breakpoint(tab992) {
+                gap: length(20);
+            }
+
+            &-item {
+                color: $black-800;
+                @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(16, 16));
+                
+                @include breakpoint(mobile768) {
+                    @include font-face($avenirNextLTPro, style('normal'), size(18), weight('normal'), line-height(18, 18));
+                }
+                
+                @include breakpoint(tab992) {
+                    @include font-face($avenirNextLTPro, style('normal'), size(20), weight('normal'), line-height(20, 20));
+                }
+            }
+        }
+    }
+
+    .detailbox {
+        .about-text {
+            color: $black-700;
+            @include font-face($avenirNextLTPro, style('normal'), size(14), weight('normal'), line-height(28.4, 14));
+            text-align: justify;
+            
+            @include breakpoint(mobile768) {
+                @include font-face($avenirNextLTPro, style('normal'), size(16), weight('normal'), line-height(30.4, 16));
+            }
+            
+            @include breakpoint(tab992) {
+                @include font-face($avenirNextLTPro, style('normal'), size(18), weight('normal'), line-height(32.4, 18));
+            }
+        }
+    }
+}

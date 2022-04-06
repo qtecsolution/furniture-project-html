@@ -1435,6 +1435,42 @@ select {
   color: #ffffff;
 }
 
+.btn-size {
+  padding: 0.75rem 1.875rem;
+  border: solid 0.0625rem #F5F5F5;
+  background: #ffffff;
+  color: #46474B;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.9;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 62rem) {
+  .btn-size {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.btn-size:hover:not(.active) {
+  background: #B78628;
+  color: #ffffff;
+  border-color: #B78628;
+}
+
+.btn-size.active {
+  background: #B78628;
+  color: #ffffff;
+  border-color: #B78628;
+}
+
 /**=====================================================**
                     BUTTON STYLE END
 =======================================================**/
@@ -2699,4 +2735,572 @@ select {
 .products-contents .productrow .productlink {
   display: block;
   width: 100%;
+}
+
+.productdetails {
+  padding: 0rem 0rem 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .productdetails {
+    padding: 0rem 0rem 8.125rem;
+  }
+}
+
+.productdetails .thumbnail {
+  background: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+@media screen and (min-width: 87.5rem) {
+  .productdetails .thumbnail {
+    height: 40.5rem;
+  }
+}
+
+.productdetails .thumbnail .thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 3rem;
+  height: 100%;
+}
+
+@media screen and (min-width: 87.5rem) {
+  .productdetails .thumbnail .thumb {
+    width: 37.9375rem;
+    height: 26.25rem;
+  }
+}
+
+.productdetails .thumbnail .thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.productdetails .thumbnail .thumb img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.productdetails .descriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.625rem;
+}
+
+.productdetails .descriptions-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.625rem;
+}
+
+.productdetails .descriptions-header .detailinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.productdetails .descriptions-header .detailinfo .title {
+  color: #454545;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.32143;
+}
+
+@media screen and (min-width: 75rem) {
+  .productdetails .descriptions-header .detailinfo .title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 2.375rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+.productdetails .descriptions-header .detailinfo .ratinglist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem;
+}
+
+.productdetails .descriptions-header .detailinfo .ratinglist-item {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.productdetails .descriptions-header .detailinfo .ratinglist-item svg {
+  width: 100%;
+  height: 100%;
+}
+
+.productdetails .descriptions-header .detailinfo .price {
+  color: #6A6A6A;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.productdetails .descriptions-header .text {
+  color: #46474B;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.8;
+}
+
+.productdetails .descriptions-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0rem;
+  border-top: solid 0.0625rem #E0E1E6;
+  border-bottom: solid 0.0625rem #E0E1E6;
+}
+
+.productdetails .descriptions-body .divider {
+  margin: 0rem 1.25rem;
+}
+
+.productdetails .descriptions-body .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.productdetails .descriptions-body .detail h4 {
+  color: #454545;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.productdetails .descriptions-body .detail p {
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.productdetails .descriptions-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.625rem;
+}
+
+.productdetails .descriptions-footer .sizebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+}
+
+.productdetails .descriptions-footer .sizebox-header .sizebox-title {
+  color: #454545;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.9;
+}
+
+@media screen and (min-width: 62rem) {
+  .productdetails .descriptions-footer .sizebox-header .sizebox-title {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
+}
+
+.productdetails .descriptions-footer .sizebox-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.productgallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .productgallery {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.productgallery .leftcontent {
+  width: 100%;
+}
+
+@media screen and (min-width: 62rem) {
+  .productgallery .leftcontent {
+    width: 50%;
+  }
+}
+
+.productgallery .leftcontent .gallerythumb {
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 62rem) {
+  .productgallery .leftcontent .gallerythumb {
+    height: 37.5rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .productgallery .leftcontent .gallerythumb {
+    height: 50rem;
+  }
+}
+
+.productgallery .leftcontent .gallerythumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.productgallery .leftcontent .gallerythumb img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.productgallery .rightcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .productgallery .rightcontent {
+    width: 50%;
+  }
+}
+
+.productgallery .rightcontent .singlecontent {
+  width: calc((100% / 2) - .625rem);
+}
+
+.productgallery .rightcontent .singlecontent .gallerythumb {
+  height: 13.75rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 62rem) {
+  .productgallery .rightcontent .singlecontent .gallerythumb {
+    height: 18.375rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .productgallery .rightcontent .singlecontent .gallerythumb {
+    height: 24.625rem;
+  }
+}
+
+.productgallery .rightcontent .singlecontent .gallerythumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.productgallery .rightcontent .singlecontent .gallerythumb img:not([disabled]):hover {
+  -webkit-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.aboutsection {
+  padding: 1.5rem 0rem 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .aboutsection {
+    padding: 3.125rem 0rem 6.25rem;
+  }
+}
+
+.aboutsection .aboutbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5625rem;
+}
+
+.aboutsection .aboutbox .titlegroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.aboutsection .aboutbox .titlegroup .subtitle {
+  color: #6A6A6A;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+@media screen and (min-width: 48rem) {
+  .aboutsection .aboutbox .titlegroup .subtitle {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .aboutsection .aboutbox .titlegroup .subtitle {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.aboutsection .aboutbox .titlegroup .title {
+  color: #454545;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.22;
+}
+
+@media screen and (min-width: 48rem) {
+  .aboutsection .aboutbox .titlegroup .title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.18333;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .aboutsection .aboutbox .titlegroup .title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+.aboutsection .aboutbox .aboutlist {
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .aboutsection .aboutbox .aboutlist {
+    gap: 1.25rem;
+  }
+}
+
+.aboutsection .aboutbox .aboutlist-item {
+  color: #46474B;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+@media screen and (min-width: 48rem) {
+  .aboutsection .aboutbox .aboutlist-item {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .aboutsection .aboutbox .aboutlist-item {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.aboutsection .detailbox .about-text {
+  color: #6A6A6A;
+  font-family: "Avenir Next LT Pro";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 2.02857;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .aboutsection .detailbox .about-text {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.9;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .aboutsection .detailbox .about-text {
+    font-family: "Avenir Next LT Pro";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.8;
+  }
 }
