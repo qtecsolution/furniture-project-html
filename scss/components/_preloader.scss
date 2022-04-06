@@ -14,7 +14,6 @@
         border-top-color: $black-900;
         border-radius: 50%;
         display: block;
-        margin: length(-75) 0 0 length(-75);
         @include square(length(150));
         position: relative;
         -webkit-animation: spin 2s linear infinite;
